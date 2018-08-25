@@ -12,4 +12,7 @@ RUN apk update && apk upgrade \
   python2 \
   && git clone --recursive https://github.com/WebAssembly/wabt \
   && cd wabt \
-  && cmake . && make
+  && mkdir out \
+  && cd out \
+  && cmake .. \
+  && make
